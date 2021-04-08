@@ -1,10 +1,14 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from send_mail import send_mail
+import os
+
+is_prod = os.environ.get('IS_HEROKU', None)
 
 app = Flask(__name__)
 
-if ENV == 'dev':
+
+if not is_prod:
     app.debug = True
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1551900051@localhost/lei'
 else:
