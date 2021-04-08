@@ -4,8 +4,6 @@ from send_mail import send_mail
 
 app = Flask(__name__)
 
-ENV = 'dev'
-
 if ENV == 'dev':
     app.debug = True
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1551900051@localhost/lei'
@@ -31,6 +29,7 @@ class Feedback(db.Model):
         self.dealer = dealer
         self.rating = rating
         self.comments = comments
+        #db.create_all()
 
 
 @app.route('/')
