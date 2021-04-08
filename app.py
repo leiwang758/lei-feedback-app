@@ -13,7 +13,7 @@ if not is_prod:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1551900051@localhost/lei'
 else:
     app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ocdqrlmrlwujsq:79464ef6c0563bc04482549809dda12c478083ee196b3281d9c1d407f0765331@ec2-52-71-161-140.compute-1.amazonaws.com:5432/d5o8d46u75apsk'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ocdqrlmrlwujsq:79464ef6c0563bc04482549809dda12c478083ee196b3281d9c1d407f0765331@ec2-52-71-161-140.compute-1.amazonaws.com:5432/d5o8d46u75apsk'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
